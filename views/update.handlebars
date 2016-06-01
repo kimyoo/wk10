@@ -1,6 +1,6 @@
 <h1>Update this Record</h1>
 
-<table class="myTable">
+<table>
 
 	<!-- Header Row -->
 	<tr>
@@ -9,19 +9,19 @@
 		<th>Reps</th>
 		<th>Weight</th>
 		<th>Date</th>
-		<th>LBs</th>
+		<th>Measure (lbs/kg)</th>
 		<th>Action</th>
 	</tr>
 	
 	<!-- Update Record -->
 	<tr>
 		<form action="/update" method="get">
-			<td class="myTable">Updated</td>
+			<td>Updated</td>
 			<td><input type="text" name="name" required value={{rowToEdit.name}}></td>
-			<td><input type="number" name="reps" value={{rowToEdit.reps}}></td>
+			<td><input type="number" name="rep" value={{rowToEdit.rep}}></td>
 			<td><input type="number" name="weight" value={{rowToEdit.weight}}></td>
 			<td><input type="date" name="date" value={{rowToEdit.date}}></td>
-			<td><input type="number" name="lbs" min="0" max="1" value={{rowToEdit.lbs}}></td>
+			<td><input type="number" name="measure" min="0" max="1" value={{rowToEdit.measure}}></td>
 			<td>
 				<input type="hidden" name="id" value={{rowToEdit.id}}>
 				<input type="submit" value="Update"/>
@@ -31,12 +31,12 @@
 	
 	<!-- Original Record -->
 	<tr>
-		<td class="myTable">Original</td>
-		<td class="myTable">{{rowToEdit.name}}</td>
-		<td class="myTable">{{rowToEdit.reps}}</td>
-		<td class="myTable">{{rowToEdit.weight}}</td>
-		<td class="myTable">{{rowToEdit.date}}</td>
-		<td class="myTable">{{rowToEdit.lbs}}</td>
+		<td>Original</td>
+		<td>{{rowToEdit.name}}</td>
+		<td>{{rowToEdit.rep}}</td>
+		<td>{{rowToEdit.weight}}</td>
+		<td>{{rowToEdit.date}}</td>
+		<td>{{rowToEdit.measure}}</td>
 	</tr>
 
 

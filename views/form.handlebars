@@ -1,6 +1,6 @@
 <h1>Workout Table</h1>
 
-<table class="myTable">
+<table>
 
 	<!-- Header Row -->
 	<tr>
@@ -8,7 +8,7 @@
 		<th>Reps</th>
 		<th>Weight</th>
 		<th>Date</th>
-		<th>LBs</th>
+		<th>Measure(lbs=1/kg=0)</th>
 		<th colspan="2">Action</th>
 	</tr>
 	
@@ -16,10 +16,10 @@
 	<tr>
 		<form action="/addrow" method="get">
 			<td><input type="text" name="name" required></td>
-			<td><input type="number" name="reps"></td>
+			<td><input type="number" name="rep"></td>
 			<td><input type="number" name="weight"></td>
 			<td><input type="date" name="date"></td>
-			<td><input type="number" name="lbs" min="0" max="1"></td>
+			<td><input type="number" name="measure" min="0" max="1"></td>
 			<td colspan="2"><input type="submit" value="Add Row"/></td>
 		</form>
 	</tr>
@@ -27,11 +27,11 @@
 	<!-- The Data Table -->
 	{{#each dArray}}
 		<tr id="row_{{this.id}}">
-			<td class="myTable">{{this.name}}</td>
-			<td class="myTable">{{this.reps}}</td>
-			<td class="myTable">{{this.weight}}</td>
-			<td class="myTable">{{this.date}}</td>
-			<td class="myTable">{{this.lbs}}</td>
+			<td>{{this.name}}</td>
+			<td>{{this.rep}}</td>
+			<td>{{this.weight}}</td>
+			<td>{{this.date}}</td>
+			<td>{{this.measure}}</td>
 			
 			<!-- Delete Button -->
 			<form action="/delete" method="get">
