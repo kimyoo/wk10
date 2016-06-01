@@ -3,6 +3,8 @@
 	<!-- Add New Data Row -->
 
 <form action="/addrow" method="get">
+	<fieldset>
+	<legend>Add Workout</legend>
         <label for="nameId">Enter name of the exercise:</label>
         <input type="text" name="name" id="nameId">
 	  <br>
@@ -11,31 +13,19 @@
         <input type="text" name="rep" id="repId">
 	  <br>
 	  <br>
-      <fieldset>
         <label for="weightId">Enter the weight of the weights used:</label>
         <input type="text" name="weight" id="weightId">
-      </fieldset>
 	  <br>
 	  <br>
-      <fieldset>
         <label for="dateId">Enter the date of the exercise performed:</label>
         <input type="text" name="date" id="dateId">
-      </fieldset>
 	  <br>
 	  <br>
-      <fieldset>
         <label for="measureId">What is the measurement of weight (lb or kg):</label>
         <input type="text" name="measure" id="measureId">
-      </fieldset>	
-<!--	  
-			<td><input type="text" name="name" required></td>
-			<td><input type="number" name="rep"></td>
-			<td><input type="number" name="weight"></td>
-			<td><input type="date" name="date"></td>
-			<td><input type="number" name="measure" min="0" max="1"></td>
-			<td colspan="2">
--->			
-			<input type="submit" value="Add Row"/></td>
+		
+		<input type="submit" value="Add Row"/></td>
+	</fieldset>
 </form>
 
 	
