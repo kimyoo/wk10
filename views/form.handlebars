@@ -1,5 +1,17 @@
 <h1>Workout Table</h1>
 
+	<!-- Add New Data Row -->
+
+		<form action="/addrow" method="get">
+			<td><input type="text" name="name" required></td>
+			<td><input type="number" name="rep"></td>
+			<td><input type="number" name="weight"></td>
+			<td><input type="date" name="date"></td>
+			<td><input type="number" name="measure" min="0" max="1"></td>
+			<td colspan="2"><input type="submit" value="Add Row"/></td>
+		</form>
+
+	
 <table>
 
 	<!-- Header Row -->
@@ -12,17 +24,7 @@
 		<th colspan="2">Action</th>
 	</tr>
 	
-	<!-- Add New Data Row -->
-	<tr>
-		<form action="/addrow" method="get">
-			<td><input type="text" name="name" required></td>
-			<td><input type="number" name="rep"></td>
-			<td><input type="number" name="weight"></td>
-			<td><input type="date" name="date"></td>
-			<td><input type="number" name="measure" min="0" max="1"></td>
-			<td colspan="2"><input type="submit" value="Add Row"/></td>
-		</form>
-	</tr>
+
 	
 	<!-- The Data Table -->
 	{{#each results}}
