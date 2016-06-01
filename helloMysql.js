@@ -25,8 +25,8 @@ app.get('/',function(req,res,next){
 	//run select query
 	mysql.pool.query('SELECT * FROM workout', function(err, rows, fields){
 		
-		//set the dArray to the rows object
-		context.dArray = rows;
+		//set the results to the rows object
+		context.results = rows;
 		
 		//render the context
 		res.render('form', context);
@@ -144,7 +144,7 @@ app.get('/edit',function(req,res,next){
 	//run select query
 	mysql.pool.query("SELECT * FROM workout WHERE id=?", [req.query.id], function(err, rows, fields){
 		
-		//set the dArray to the rows object
+		//set the results to the rows object
 		context.rowToEdit = rows[0];
 		
 		//render the context
