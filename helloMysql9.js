@@ -81,6 +81,17 @@ app.get('/update',function(req,res,next){
   });
 });
 
+app.get('/edit',function(req,res,next){
+	var context = {};
+	mysql.pool.query("SELECT * FROM workout WHERE id=?", [req.query.id], function(err, rows, fields){
+
+		context.rowToEdit = rows[0];
+
+		res.render('update', context);
+	});	
+
+});
+
 app.get('/reset-table',function(req,res,next){
   var context = {};
   mysql.pool.query("DROP TABLE IF EXISTS workout", function(err){
