@@ -49,7 +49,7 @@ app.get('/delete',function(req,res,next){
     }
     //context.results = "Deleted " + result.changedRows + " rows.";
     //res.render('home',context);
-	res.redirect("/");
+	rres.redirect("http://ec2-52-37-250-27.us-west-2.compute.amazonaws.com:3000/");
   });
 });
 
@@ -75,7 +75,7 @@ app.get('/edit',function(req,res,next){
           return;
         }
         //context.results = "Updated " + result.changedRows + " rows.";
-        res.render('home',context);
+        res.redirect("http://ec2-52-37-250-27.us-west-2.compute.amazonaws.com:3000/");
       });
     }
   });
