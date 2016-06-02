@@ -15,13 +15,13 @@
 	<tr>
 		<form action="/update" method="get">
 			<td>Updated</td>
-			<td><input type="text" name="name" required value={{rowToEdit.name}}></td>
-			<td><input type="number" name="rep" value={{rowToEdit.rep}}></td>
-			<td><input type="number" name="weight" value={{rowToEdit.weight}}></td>
-			<td><input type="date" name="date" value={{rowToEdit.date}}></td>
-			<td><input type="number" name="measure" min="0" max="1" value={{rowToEdit.measure}}></td>
+			<td><input type="text" name="name" required value={{row2Edit.name}}></td>
+			<td><input type="number" name="rep" value={{row2Edit.rep}}></td>
+			<td><input type="number" name="weight" value={{row2Edit.weight}}></td>
+			<td><input type="date" name="date" value={{row2Edit.date}}></td>
+			<td><input type="number" name="measure" min="0" max="1" value={{row2Edit.measure}}></td>
 			<td>
-				<input type="hidden" name="id" value={{rowToEdit.id}}>
+				<input type="hidden" name="id" value={{row2Edit.id}}>
 				<input type="submit" value="Update"/>
 			</td>
 		</form>
@@ -30,11 +30,11 @@
 	<!-- Original Record -->
 	<tr>
 		<td>Original</td>
-		<td>{{rowToEdit.name}}</td>
-		<td>{{rowToEdit.rep}}</td>
-		<td>{{rowToEdit.weight}}</td>
-		<td>{{rowToEdit.date}}</td>
-		<td>{{rowToEdit.measure}}</td>
+		<td>{{row2Edit.name}}</td>
+		<td>{{row2Edit.rep}}</td>
+		<td>{{row2Edit.weight}}</td>
+		<td>{{row2Edit.date}}</td>
+		<td>{{row2Edit.measure}}</td>
 	</tr>
 
 
