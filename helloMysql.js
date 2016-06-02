@@ -38,7 +38,7 @@ app.get('/',function(req,res,next){
 });
 
 //add row
-app.get('/addrow',function(req,res,next){
+app.get('/insert',function(req,res,next){
 	
 	//create context object
 	var context = {};
