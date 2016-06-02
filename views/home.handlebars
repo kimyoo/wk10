@@ -1,2 +1,70 @@
-<h1>MySQL Results:</h1>
-<p>{{results}}</p>
+<h1>Workout Table</h1>
+
+	<!-- Add New Data Row -->
+
+<form action="/addrow" method="get">
+	<fieldset>
+	<legend>Add Workout</legend>
+        <label for="nameId">Enter name of the exercise:</label>
+        <input type="text" name="name" id="nameId">
+	  <br>
+	  <br>
+        <label for="repId">Enter the number of repetition:</label>
+        <input type="number" name="rep" id="repId">
+	  <br>
+	  <br>
+        <label for="weightId">Enter the weight of the weights used:</label>
+        <input type="number" name="weight" id="weightId">
+	  <br>
+	  <br>
+        <label for="dateId">Enter the date of the exercise performed:</label>
+        <input type="date" name="date" id="dateId">
+	  <br>
+	  <br>
+        <label for="measureId">What is the measurement of weight (lb or kg):</label>
+        <input type="number" name="measure" id="measureId">
+		<br><br>
+		<input type="submit" value="Add Row"/></td>
+	</fieldset>
+</form>
+
+	
+<table>
+
+	<!-- Header Row -->
+	<tr>
+		<th>Name</th>
+		<th>Reps</th>
+		<th>Weight</th>
+		<th>Date</th>
+		<th>Measure(lbs=1/kg=0)</th>
+		<th colspan="2">Action</th>
+	</tr>
+	
+
+	
+	<!-- The Data Table -->
+	{{#each results}}
+		<tr id="row_{{this.id}}">
+			<td>{{this.name}}</td>
+			<td>{{this.rep}}</td>
+			<td>{{this.weight}}</td>
+			<td>{{this.date}}</td>
+			<td>{{this.measure}}</td>
+			
+			<!-- Delete Button -->
+			<form action="/delete" method="get">
+				<input type="hidden" name="id" value={{this.id}}>
+				<td><input type="submit" value="Delete"/></td>
+			</form>
+			
+			<!-- Edit Button -->
+			<form action="/edit" method="get">
+				<input type="hidden" name="id" value={{this.id}}>
+				<td><input type="submit" value="Edit"/></td>
+			</form>
+		</tr>
+	{{/each}}
+
+</table>
+
