@@ -36,7 +36,7 @@ app.get('/insert',function(req,res,next){
       return;
     }
     //res.render('home',context);
-	res.redirect("/");
+	res.redirect("http://ec2-52-37-250-27.us-west-2.compute.amazonaws.com:3000/");
   });
 });
 
