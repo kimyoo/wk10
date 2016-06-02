@@ -1,11 +1,9 @@
+var express = require('express'); 
+var mysql = require('./dbcon.js'); 
+
+var app = express(); 
 
 
-var express = require('express'); //require express
-var mysql = require('./dbcon.js'); //require my connection info
-
-var app = express(); //initiate express
-
-//initiate handlebars
 var handlebars = require('express-handlebars').create({defaultLayout:'main'});
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');

@@ -55,7 +55,7 @@ app.get('/delete',function(req,res,next){
 
 
 ///safe-update?id=1&name=The+Task&done=false
-app.get('/safe-update',function(req,res,next){
+app.get('/edit',function(req,res,next){
   var context = {};
   mysql.pool.query("SELECT * FROM workout WHERE id=?", [req.query.id], function(err, result){
     if(err){
