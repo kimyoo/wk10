@@ -47,7 +47,8 @@ app.get('/delete',function(req,res,next){
       return;
     }
     //context.results = "Deleted " + result.changedRows + " rows.";
-    res.render('home',context);
+    //res.render('home',context);
+	res.redirect("/");
   });
 });
 
