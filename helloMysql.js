@@ -24,7 +24,10 @@ app.get('/',function(req,res,next){
 	
 	//run select query
 	mysql.pool.query('SELECT * FROM workout', function(err, rows, fields){
-		
+    if(err){
+      next(err);
+      return;
+    }		
 		//set the results to the rows object
 		context.results = rows;
 		
