@@ -35,7 +35,8 @@ app.get('/insert',function(req,res,next){
       next(err);
       return;
     }
-    res.render('home',context);
+    //res.render('home',context);
+	res.redirect("/");
   });
 });
 
